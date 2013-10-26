@@ -27,8 +27,8 @@ module Sprockets
     end
 
     def dependencies
-      deps =  data.scan(/\bfrom *["'](.+)["']/)
-      deps += data.scan(/\bimport *["'](.+)["']/)
+      deps =  data.scan(/\bfrom *["'](.*?)["']/)
+      deps += data.scan(/\bimport *["'](.*?)["']/)
 
       deps.flatten
     end
